@@ -1,0 +1,142 @@
+/* /////////////////////////////////////
+// TABLE OF CONTENTS
+////////////////////////////////////////
+
+- IMPORTS
+- HEADER
+- MAIN
+- FOOTER
+
+///////////////////////////////////// */
+
+
+/* /////////////////////////////////////
+// IMPORTS
+///////////////////////////////////// */
+
+@import 'mixins.less';
+@import 'globals.less';
+
+
+/* /////////////////////////////////////
+// HEADER
+///////////////////////////////////// */
+
+.navbar-form{
+padding-left:0;
+	.form-group{
+	position:relative;
+	width:35%;
+		input[type=text]{
+		width:100%;
+		}
+	}
+
+	.search-clear{
+	position:absolute;
+	top:8px;
+	right:8px;
+	color:#999;
+	display:none;
+	}
+}
+
+
+/* /////////////////////////////////////
+// MAIN
+///////////////////////////////////// */
+
+.btn-newtask{
+text-transform:uppercase;
+font-weight:700;
+}
+
+.projects{
+	.nav{
+	margin:2em 0;
+		li{
+		text-align:left;
+		}
+	}
+
+	form .btn{
+	text-transform:uppercase;
+	font-weight:700;
+	}
+}
+
+
+.tasks{
+position:relative;
+	.well{
+	margin-bottom:2em;
+	.clear();
+	-webkit-animation-duration: 0.5s;
+	        animation-duration: 0.5s;
+	visibility:hidden;
+	position:absolute;
+	right:0;
+		input[type=text]{
+		width:56%;
+		float:left;
+		}
+		select{
+		width:25% !important;
+		float:left;
+		margin-left:2%;
+		margin-right:2%;
+		}
+		input[type=submit]{
+		width:10%;
+		float:left;
+		text-transform:uppercase;
+		font-weight:700;
+		}
+	}
+}
+
+.tasks-toolbar{
+margin-bottom:2em;
+	button{
+	text-transform:uppercase;
+	font-weight:700;
+	}
+}
+
+.tasks .table{
+border-bottom:1px solid #ddd;
+	.cell-check{
+	width:5%;
+	}
+	.cell-task{
+	width:62.5%;
+	}
+	.cell-project{
+	width:22.5%;
+	}
+	.cell-options{
+	width:10%;
+	text-align:right;
+	}
+
+	.btn-group{
+	opacity:0;
+	}
+
+	tr:hover .btn-group{
+	opacity:1;
+	-webkit-transition:0.25s ease all;
+	   -moz-transition:0.25s ease all;
+	        transition:0.25s ease all;
+	}
+}
+
+.tasks-completed{
+display:none;
+}
+
+
+/* /////////////////////////////////////
+// FOOTER
+///////////////////////////////////// */
+
